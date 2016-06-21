@@ -1,0 +1,142 @@
+@import "normalize.css"
+$black = #212121
+$white = #FAFAFA
+
+.header
+	background-color $black
+	color $white
+	height 64px
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 10
+	display flex
+	flex-direction column
+	&-menu
+		display flex
+		justify-content space-between
+	&-titulo
+		order 1
+		margin-left .5em
+		margin-top .3em
+		margin-bottom 0
+		padding 0
+	&-boton
+		order 2
+		border-radius 6px
+		border 0
+		padding 0
+		margin 1em
+		background-color $black
+		color $white
+	&-navegacion
+		background-color $black
+	&-listaMenu
+		height 0
+		overflow hidden 
+		list-style none
+		padding 0
+		margin 0
+		transition height .3s ease 
+		&--show
+			height 280px
+		&-item
+			a
+				text-decoration none
+				width 100%
+				display block
+				padding 1.5em
+				color $white
+/*estilos seccion*/
+.contenedor
+	display flex
+	flex-wrap wrap
+	margin 64px 0 0 0
+.sec1,
+.sec2,
+.sec3,
+.sec4,
+.sec5,
+.sec6,
+.sec7,
+.sec8
+	width 100%
+.sec1
+	background-color orange
+	height 400px
+.sec2
+	background-color blue
+	height 150px
+.sec3
+	background-color red
+	height 150px
+.sec4
+	background-color green
+	height 150px
+.sec5
+	background-color yellow
+	height 150px
+.sec6
+	background-color black
+	height 150px
+.sec7
+	background-color pink
+	height 150px
+.sec8
+	background-color brown
+	height 150px
+@media (min-width: 500px)
+	.sec2, .sec3, .sec4, .sec5, .sec6, .sec7, .sec8
+		width 50%
+@media (min-width: 800px)
+	.header
+		display flex
+		flex-direction row
+		justify-content space-between
+		height 75px
+		transition all .2s ease
+		flex-wrap wrap
+		line-height 75px
+		&--white
+			background-color $white
+			color $black
+		&-boton
+			display none
+		&-titulo
+			padding 0
+			margin 0 .5em
+		&-listaMenu
+			/*display flex
+			flex-direction row*/
+			height 75px
+			padding 0
+			margin 0
+			&-item
+				display inline-block
+				a
+					padding 0 1em
+					background-color $black
+			&--white
+				&-item
+					a
+						background-color $white
+						color $black
+	.separador
+		margin 75px 0 0 0
+	.contenedor
+		margin 0 auto
+		width 800px
+	.sec1
+		width 60%
+	.sec2 
+		width 40%
+		height 400px
+	.sec3, .sec4, .sec5
+		height 250px
+		width 33.3%
+	.sec6, .sec7, .sec8
+		height 250px
+		width 33.3%
+	
+		
